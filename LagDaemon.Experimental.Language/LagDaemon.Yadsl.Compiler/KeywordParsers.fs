@@ -5,12 +5,8 @@ module KeywordParser =
     open FParsec
     open FParsec.Pipes
     open Model
+    open PrimParsers
 
-
-    let ws = spaces
-    let ws1 = spaces1
-    let str = pstring
-    let strCI = pstringCI
 
 
     // Keywords

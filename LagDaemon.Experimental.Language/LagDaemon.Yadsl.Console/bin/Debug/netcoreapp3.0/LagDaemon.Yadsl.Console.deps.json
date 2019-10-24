@@ -6,14 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.0": {
-      "LagDaemon.Yadsl.Compiler/1.0.0": {
+      "LagDaemon.Yadsl.Console/1.0.0": {
         "dependencies": {
-          "FParsec": "1.0.4-RC3",
-          "FParsec-Pipes": "1.1.1",
-          "FSharp.Core": "4.7.0"
+          "FSharp.Core": "4.7.0",
+          "LagDaemon.Yadsl.Compiler": "1.0.0"
         },
         "runtime": {
-          "LagDaemon.Yadsl.Compiler.dll": {}
+          "LagDaemon.Yadsl.Console.dll": {}
         }
       },
       "FParsec/1.0.4-RC3": {
@@ -761,11 +760,21 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
         }
+      },
+      "LagDaemon.Yadsl.Compiler/1.0.0": {
+        "dependencies": {
+          "FParsec": "1.0.4-RC3",
+          "FParsec-Pipes": "1.1.1",
+          "FSharp.Core": "4.7.0"
+        },
+        "runtime": {
+          "LagDaemon.Yadsl.Compiler.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "LagDaemon.Yadsl.Compiler/1.0.0": {
+    "LagDaemon.Yadsl.Console/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1308,6 +1317,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "LagDaemon.Yadsl.Compiler/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

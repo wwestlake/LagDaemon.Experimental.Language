@@ -9,4 +9,8 @@
     <Compile Include="Program.fs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LagDaemon.Yadsl.Compiler\LagDaemon.Yadsl.Compiler.fsproj" />
+  </ItemGroup>
+
 </Project>
