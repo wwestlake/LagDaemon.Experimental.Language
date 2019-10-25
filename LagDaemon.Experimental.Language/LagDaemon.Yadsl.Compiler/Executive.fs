@@ -13,7 +13,9 @@ module Executive =
 
     /// Parse and execute a string
     let execString p (str:string) =
-        match run p str with
+        let bytes = Encoding.ASCII.GetBytes(str)
+        let stream = new MemoryStream( bytes, false )
+        match runParserOnStream p UserState.Default "test" stream Encoding.UTF8 with
         | Success (result, _, _) -> 
             printfn "Success: %A" result
             //exec result
@@ -21,7 +23,7 @@ module Executive =
 
     /// Parse and execute a file
     let execFile  (p:Parser<_>) (filename:string) =
-        match runParserOnFile p () filename Encoding.UTF8 with
+        match runParserOnFile p UserState.Default filename Encoding.UTF8 with
         | Success (result, _, _) -> 
             printfn "Success: %A" result
             exec result
@@ -29,7 +31,7 @@ module Executive =
 
     /// Parse and execute a stream
     let execStream  (p:Parser<_>) (name:string) (stream:Stream) =
-        match runParserOnStream p () name stream Encoding.UTF8 with
+        match runParserOnStream p UserState.Default name stream Encoding.UTF8 with
         | Success (result, _, _) -> 
             printfn "Success: %A" result
             exec result

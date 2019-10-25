@@ -20,7 +20,7 @@ module PrimParsers =
                         ||| NumberLiteralOptions.AllowFraction
                         ||| NumberLiteralOptions.AllowExponent
     
-    let pnumber : Parser<Number, unit> =
+    let pnumber : Parser<Number> =
         numberLiteral numberFormat "number"
         |>> fun nl -> if nl.IsInteger then Int (int64 nl.String)
                       else Float (float nl.String)

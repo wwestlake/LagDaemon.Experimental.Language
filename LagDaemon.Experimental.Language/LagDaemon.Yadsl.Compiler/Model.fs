@@ -24,5 +24,9 @@ module Model=
         | TIdentifier of string
 
 
-    type UserState = unit // doesn't have to be unit, of course
+    type UserState = {
+      symTable: Map<string, YValue>
+    }
+        with static member Default = { symTable = Map.empty }
+
     type Parser<'t> = Parser<'t, UserState>
