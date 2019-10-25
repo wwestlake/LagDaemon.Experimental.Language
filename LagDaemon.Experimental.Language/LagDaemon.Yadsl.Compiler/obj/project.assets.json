@@ -160,6 +160,15 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
+      "Piglet/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Piglet.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Piglet.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -1442,6 +1451,20 @@
         "dotnet_library_license.txt",
         "netstandard.library.1.6.1.nupkg.sha512",
         "netstandard.library.nuspec"
+      ]
+    },
+    "Piglet/1.4.0": {
+      "sha512": "s1fuVCEcHo5RkKlf0IA6nf4tyI9NeUmTe+UtcJ1zY6cTK/UX/99Vg+qkqg2AW1y7KKrtLyfY+VG8V7O4aOKZ5g==",
+      "type": "package",
+      "path": "piglet/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Piglet.XML",
+        "lib/net40/Piglet.dll",
+        "lib/net40/Piglet.pdb",
+        "piglet.1.4.0.nupkg.sha512",
+        "piglet.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -4619,7 +4642,8 @@
     ".NETCoreApp,Version=v3.0": [
       "FParsec >= 1.0.4-RC3",
       "FParsec-Pipes >= 1.1.1",
-      "FSharp.Core >= 4.7.0"
+      "FSharp.Core >= 4.7.0",
+      "Piglet >= 1.4.0"
     ]
   },
   "packageFolders": {
@@ -4673,6 +4697,10 @@
           "FSharp.Core": {
             "target": "Package",
             "version": "[4.7.0, )"
+          },
+          "Piglet": {
+            "target": "Package",
+            "version": "[1.4.0, )"
           }
         },
         "imports": [
@@ -4693,5 +4721,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Piglet 1.4.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Piglet",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.0"
+      ]
+    }
+  ]
 }

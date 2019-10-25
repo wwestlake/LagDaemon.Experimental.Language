@@ -60,3 +60,4 @@ C:\Users\wwestlake\Source\Repos\LagDaemon.Experimental.Language\LagDaemon.Experi
 C:\Users\wwestlake\Source\Repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Console\bin\Debug\netcoreapp3.0\LagDaemon.Yadsl.Compiler.dll
 C:\Users\wwestlake\Source\Repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Console\bin\Debug\netcoreapp3.0\LagDaemon.Yadsl.Compiler.pdb
 C:\Users\wwestlake\Source\Repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Console\obj\Debug\netcoreapp3.0\LagDaemon.Yadsl.Console.fsproj.CopyComplete
+C:\Users\Bill.Westlake\Source\Repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Console\bin\Debug\netcoreapp3.0\Piglet.dll

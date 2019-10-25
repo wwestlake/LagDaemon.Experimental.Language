@@ -50,6 +50,10 @@
             "FSharp.Core": {
               "target": "Package",
               "version": "[4.7.0, )"
+            },
+            "Piglet": {
+              "target": "Package",
+              "version": "[1.4.0, )"
             }
           },
           "imports": [
