@@ -21,6 +21,7 @@ module Model=
         | TBool of bool
         | TChar of char
         | TByte of byte
+        | TIdentifier of string
 
 
     type UserState = unit // doesn't have to be unit, of course

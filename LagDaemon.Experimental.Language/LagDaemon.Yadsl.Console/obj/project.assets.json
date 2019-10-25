@@ -4642,25 +4642,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bill.Westlake\\.nuget\\packages\\": {},
+    "C:\\Users\\wwestlake\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bill.Westlake\\source\\repos\\LagDaemon.Experimental.Language\\LagDaemon.Experimental.Language\\LagDaemon.Yadsl.Console\\LagDaemon.Yadsl.Console.fsproj",
+      "projectUniqueName": "C:\\Users\\wwestlake\\Source\\Repos\\LagDaemon.Experimental.Language\\LagDaemon.Experimental.Language\\LagDaemon.Yadsl.Console\\LagDaemon.Yadsl.Console.fsproj",
       "projectName": "LagDaemon.Yadsl.Console",
-      "projectPath": "C:\\Users\\Bill.Westlake\\source\\repos\\LagDaemon.Experimental.Language\\LagDaemon.Experimental.Language\\LagDaemon.Yadsl.Console\\LagDaemon.Yadsl.Console.fsproj",
-      "packagesPath": "C:\\Users\\Bill.Westlake\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bill.Westlake\\source\\repos\\LagDaemon.Experimental.Language\\LagDaemon.Experimental.Language\\LagDaemon.Yadsl.Console\\obj\\",
+      "projectPath": "C:\\Users\\wwestlake\\Source\\Repos\\LagDaemon.Experimental.Language\\LagDaemon.Experimental.Language\\LagDaemon.Yadsl.Console\\LagDaemon.Yadsl.Console.fsproj",
+      "packagesPath": "C:\\Users\\wwestlake\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\wwestlake\\Source\\Repos\\LagDaemon.Experimental.Language\\LagDaemon.Experimental.Language\\LagDaemon.Yadsl.Console\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Bill.Westlake\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wwestlake\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -4669,14 +4669,13 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\Bill.Westlake\\Documents\\NUGET Library": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\Bill.Westlake\\source\\repos\\LagDaemon.Experimental.Language\\LagDaemon.Experimental.Language\\LagDaemon.Yadsl.Compiler\\LagDaemon.Yadsl.Compiler.fsproj": {
-              "projectPath": "C:\\Users\\Bill.Westlake\\source\\repos\\LagDaemon.Experimental.Language\\LagDaemon.Experimental.Language\\LagDaemon.Yadsl.Compiler\\LagDaemon.Yadsl.Compiler.fsproj"
+            "C:\\Users\\wwestlake\\Source\\Repos\\LagDaemon.Experimental.Language\\LagDaemon.Experimental.Language\\LagDaemon.Yadsl.Compiler\\LagDaemon.Yadsl.Compiler.fsproj": {
+              "projectPath": "C:\\Users\\wwestlake\\Source\\Repos\\LagDaemon.Experimental.Language\\LagDaemon.Experimental.Language\\LagDaemon.Yadsl.Compiler\\LagDaemon.Yadsl.Compiler.fsproj"
             }
           }
         }

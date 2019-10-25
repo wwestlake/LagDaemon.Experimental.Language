@@ -3,13 +3,8 @@
 
 module ValueParsers =
 
-    open System
-    open System.Text
-    open System.IO
     open Model
-    open KeywordParser
     open FParsec
-    open FParsec.Pipes
     open PrimParsers
 
     /// converts a hex character to it integer value
@@ -80,8 +75,10 @@ module ValueParsers =
     let byteLiteral : Parser<_> = pint8 .>> pchar 'b' |>> byte |>> TByte
 
     let floatOrIntegerLiteral : Parser<_> = 
-         (pint64 .>> ws1 |>> TInteger)
-            >>? (pfloat .>> ws1 |>> TFloat)
+        pnumber |>> (fun x -> match x with 
+                              | Int i -> TInteger i
+                              | Float f -> TFloat f
+                    )
 
     let literalValue : Parser<_> =
               [

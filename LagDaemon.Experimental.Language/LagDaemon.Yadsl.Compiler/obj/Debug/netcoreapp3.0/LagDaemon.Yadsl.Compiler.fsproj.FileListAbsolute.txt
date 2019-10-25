@@ -6,3 +6,11 @@ C:\Users\Bill.Westlake\source\repos\LagDaemon.Experimental.Language\LagDaemon.Ex
 C:\Users\Bill.Westlake\source\repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Compiler\bin\Debug\netcoreapp3.0\LagDaemon.Yadsl.Compiler.pdb
 C:\Users\Bill.Westlake\source\repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Compiler\obj\Debug\netcoreapp3.0\LagDaemon.Yadsl.Compiler.dll
 C:\Users\Bill.Westlake\source\repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Compiler\obj\Debug\netcoreapp3.0\LagDaemon.Yadsl.Compiler.pdb
+C:\Users\wwestlake\Source\Repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Compiler\bin\Debug\netcoreapp3.0\LagDaemon.Yadsl.Compiler.deps.json
+C:\Users\wwestlake\Source\Repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Compiler\bin\Debug\netcoreapp3.0\LagDaemon.Yadsl.Compiler.dll
+C:\Users\wwestlake\Source\Repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Compiler\bin\Debug\netcoreapp3.0\LagDaemon.Yadsl.Compiler.pdb
+C:\Users\wwestlake\Source\Repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Compiler\obj\Debug\netcoreapp3.0\LagDaemon.Yadsl.Compiler.fsprojAssemblyReference.cache
+C:\Users\wwestlake\Source\Repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Compiler\obj\Debug\netcoreapp3.0\LagDaemon.Yadsl.Compiler.AssemblyInfoInputs.cache
+C:\Users\wwestlake\Source\Repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Compiler\obj\Debug\netcoreapp3.0\LagDaemon.Yadsl.Compiler.AssemblyInfo.fs
+C:\Users\wwestlake\Source\Repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Compiler\obj\Debug\netcoreapp3.0\LagDaemon.Yadsl.Compiler.dll
+C:\Users\wwestlake\Source\Repos\LagDaemon.Experimental.Language\LagDaemon.Experimental.Language\LagDaemon.Yadsl.Compiler\obj\Debug\netcoreapp3.0\LagDaemon.Yadsl.Compiler.pdb
