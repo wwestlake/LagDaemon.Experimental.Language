@@ -50,7 +50,7 @@ module PrimParsers =
             blockComment
         ] |> choice
        
-    let pspaces = spaces >>. many (spaces >>. pcomment >>. spaces)   
+    let pspaces = spaces >>. many (spaces >>. blockComment >>. spaces)   
     let ws : Parser<_> = pspaces >>. many (pspaces >>. blockComment >>. pspaces) |>> (fun _ -> ())
     let ws1 = spaces1
     let str = pstring
@@ -58,4 +58,7 @@ module PrimParsers =
     let str_ws1 s = pstring s .>> ws
     let strCI = pstringCI
 
+    let (<?|>) a b : Parser<_> =
+        attempt a <|> b
 
+    let betweenStrings s1 s2 = between (str s1) (str s2)

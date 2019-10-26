@@ -18,13 +18,12 @@ module IdentifierParsers =
     
     let pidentifier =
         pidentifier_g 
-        >>= fun s -> 
+        >>= (fun s -> 
                 if isKeyword s 
                 then fail (sprintf "The word '%s' is a keyword, it cannot be used as an identifier" s)
-                else preturn (s |> Identifier)
+                else preturn (s |> Identifier)) .>> ws
 
 
-    
 
 
 

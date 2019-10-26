@@ -8,38 +8,47 @@ module Declarations =
     open PrimParsers
 
     let scalarDecl : Parser<_> = parse {
-        let! _ = ws
         let! _ = pDefine
-        let! _ = ws
         let! ident = pidentifier
         return ident    
     }
 
     let typeDecl : Parser<_> = parse {
-        let! _ = ws
         let! _ = pColon
-        let! _ = ws
         let tp = pTypeSpec
         return! tp    
     }
 
-    let scalarVariableDecl_full : Parser<_> = parse {
+    let scalarVariableDecl' : Parser<_> = parse {
         let! ident = scalarDecl
         let! tp = typeDecl
         return ScalarVariableDeclaration (tp, ident)
     }
 
-    let scalarVariableDecl_infered : Parser<_> = parse {
+    let inferredVariableDecl : Parser<_> = parse {
         let! ident = scalarDecl
-        return ScalarVariableDeclaration (Inferred, ident)
+        return InferredVariableDeclaration (Inferred, ident)
     }
 
-    let (<?|>) a b : Parser<_> =
-        attempt a <|> b
 
     let scalarVariableDecl : Parser<_> = 
-        scalarVariableDecl_full <?|> scalarVariableDecl_infered
+        scalarVariableDecl' <?|> inferredVariableDecl
 
 
+
+    let functionDecl : Parser<_> = parse {
+        let! _ = pFunction
+        let! ident = pidentifier
+        let! _ = pColon
+        let! fspec = sepBy pTypeSpec pRightArrow
+        return AbstractFunctionDeclaration (ident, fspec) 
+    }
+        
+    let moduleDecl : Parser<_> = parse {
+        let! _ = pModule
+        let! module_name = sepBy pidentifier pDot
+        let! export_list = between pOpenParen pCloseParen (sepBy pidentifier pComma)
+        return ModuleHeader (module_name, export_list)
+    }
 
 

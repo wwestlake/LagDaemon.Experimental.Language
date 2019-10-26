@@ -15,7 +15,7 @@ module Model=
 
     type Program = Module list
     and Module = ModuleHeader * Declaration list
-    and ModuleHeader = Identifier * Identifier list
+    and ModuleHeader = ModuleHeader of Identifier list * Identifier list
     and Declaration =
         | StaticVariableDeclaration of VariableDeclaration
         | FunctionDeclaration of FunctionDeclaration
@@ -64,7 +64,7 @@ module Model=
         | TupleVariableDeclaration of (TypeSpec * Identifier) list
 
     and FunctionDeclaration = TypeSpec * Identifier * Parameters * CompoundStatement
-    and AbstractFunctionDeclaration = TypeSpec * Identifier * Parameters
+    and AbstractFunctionDeclaration = AbstractFunctionDeclaration of Identifier * TypeSpec list
     and LambdaDeclaration = TypeSpec * CaptureList * Parameters * CompoundStatement
     and CaptureList = (TypeSpec * Identifier) list
     and Identifier = Identifier of string
