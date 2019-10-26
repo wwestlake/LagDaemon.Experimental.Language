@@ -21,10 +21,10 @@ module IdentifierParsers =
         >>= fun s -> 
                 if isKeyword s 
                 then fail (sprintf "The word '%s' is a keyword, it cannot be used as an identifier" s)
-                else preturn (s |> TIdentifier)
+                else preturn (s |> Identifier)
 
 
-
+    
 
 
 

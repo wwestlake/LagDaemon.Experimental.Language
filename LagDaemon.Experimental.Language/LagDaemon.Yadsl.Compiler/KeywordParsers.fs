@@ -64,7 +64,6 @@ module KeywordParser =
 
     // Keywords
     let pModule     : (Parser<_>) = str "module"                        >>% KWModule
-    let pFunction   : (Parser<_>) = str "fun" <|> str "function"        >>% KWFunction
     let pIf         : (Parser<_>) = str "if"                            >>% KWIf
     let pThen       : (Parser<_>) = str "then"                          >>% KWThen
     let pElse       : (Parser<_>) = str "else"                          >>% KWElse
@@ -76,7 +75,6 @@ module KeywordParser =
     let pDefine     : (Parser<_>) = str "define" <|> str "def"          >>% KWDefine
     let pLet        : (Parser<_>) = str "let"                           >>% KWLet
     let pLambda     : (Parser<_>) = str "lambda" <|> str "\\"           >>% KWLambda
-    let pType       : (Parser<_>) = str "type"                          >>% KWType
     let pRecursive  : (Parser<_>) = str "rec"                           >>% KWRec
     let pImport     : (Parser<_>) = str "import" <|> str "imp"          >>% KWImport
     let pForAll     : (Parser<_>) = str "forall" <|> str "foreach"      >>% KWForall
@@ -93,16 +91,43 @@ module KeywordParser =
     let pMay        : (Parser<_>) = str "may"                           >>% KWMay
     let pMust       : (Parser<_>) = str "must"                          >>% KWMust
     let pShall      : (Parser<_>) = str "shall"                         >>% KWShall
-    let pInt        : (Parser<_>) = str "integer" <|> str "int"         >>% KWInteger
-    let pFloat      : (Parser<_>) = str "float"                         >>% KWFloat
-    let pString     : (Parser<_>) = str "string"                        >>% KWString
-    let pChar       : (Parser<_>) = str "char"                          >>% KWChar
-    let pBool       : (Parser<_>) = str "bool"                          >>% KWBool
-    let pStruct     : (Parser<_>) = str "record" <|> str "structure" 
-                                                       <|> str "struct" >>% KWRecord
-    let pByte       : (Parser<_>) = str "byte"                          >>% KWByte
-    let pData       : (Parser<_>) = str "data"                          >>% KWData
-    let pUnit       : (Parser<_>) = str "unit"                          >>% KWUnit
+
+    
+    let pUnit                      : Parser<_> = str "unit"             >>% Unit
+    let pBoolean                   : Parser<_> = str "bool"             >>% Boolean
+    let pInteger                   : Parser<_> = str "int"              >>% Integer
+    let pFloat                     : Parser<_> = str "float"            >>% FloatNum
+    let pString                    : Parser<_> = str "string"           >>% String
+    let pCharacter                 : Parser<_> = str "char"             >>% Character
+    let pByte                      : Parser<_> = str "byte"             >>% Byte
+    let pClass                     : Parser<_> = str "class"            >>% Class
+    let pStruct                    : Parser<_> = str "struct"           >>% Struct
+    let pUnion                     : Parser<_> = str "union"            >>% Union
+    let pType                      : Parser<_> = str "type"             >>% Type
+    let pAdtProduct                : Parser<_> = str "record"           >>% AdtProduct
+    let pAdtTypeEnumeration        : Parser<_> = str "discr"            >>% AdtTypeEnumeration
+    let pAdtScalarEnumberation     : Parser<_> = str "enum"             >>% AdtScalarEnumberation
+    let pInterface                 : Parser<_> = str "interface"        >>% Interface
+    let pFunction                  : Parser<_> = str "function"         >>% Function
+
+    let pTypeSpec : Parser<_> = choice [
+                pUnit                 
+                pBoolean              
+                pInteger              
+                pFloat                
+                pString               
+                pCharacter            
+                pByte                 
+                pClass                
+                pStruct               
+                pUnion                
+                pType                 
+                pAdtProduct           
+                pAdtTypeEnumeration   
+                pAdtScalarEnumberation
+                pInterface            
+                pFunction             
+            ]
 
     // operators
     let pRightArrow         : (Parser<_>) = str "->"                    >>% OPRightArrow
@@ -149,7 +174,7 @@ module KeywordParser =
     let pBackSlant          : (Parser<_>) = str "\\"                    >>% OPBackSlant
 
 
-
+    
 
 
 

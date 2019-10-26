@@ -36,16 +36,17 @@ module Model=
     and AdtScalarEnumerationDeclaration = AdtSumDeclaration
 
     and TypeSpec =
+        | Inferred
         | Unit
         | Boolean
         | Integer
-        | Float
+        | FloatNum
         | String
         | Character
         | Byte
         | Class
         | Struct
-        | Untion
+        | Union
         | Type
         | AdtProduct
         | AdtTypeEnumeration
@@ -57,6 +58,7 @@ module Model=
     and FunctionSpec = (Identifier * TypeSpec) list
         
     and VariableDeclaration =
+        | InferredVariableDeclaration of TypeSpec * Identifier
         | ScalarVariableDeclaration of TypeSpec * Identifier
         | CollectionVariableDeclaration of TypeSpec * Identifier
         | TupleVariableDeclaration of (TypeSpec * Identifier) list
@@ -65,7 +67,7 @@ module Model=
     and AbstractFunctionDeclaration = TypeSpec * Identifier * Parameters
     and LambdaDeclaration = TypeSpec * CaptureList * Parameters * CompoundStatement
     and CaptureList = (TypeSpec * Identifier) list
-    and Identifier = string
+    and Identifier = Identifier of string
     and Parameters = VariableDeclaration list
     and IdentifierRef = { Identifier: string }
     and Statement =
@@ -122,7 +124,6 @@ module Model=
         | TBool of bool
         | TChar of char
         | TByte of byte
-        | TIdentifier of string
 
     type Keywords =
         | KWModule 
